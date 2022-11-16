@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'My_Blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'practice_django_blog',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -122,11 +126,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = STATIC_DIR
+STATICFILES_DIRS = STATIC_DIR,
 
 #media
 
-MEDIA_ROOT = MEDIA_DIR
+MEDIA_ROOT = MEDIA_DIR,
 MEDIA_URL = '/media/'
 
 
