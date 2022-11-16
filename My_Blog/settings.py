@@ -43,7 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'App_login',
     'App_blog',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,6 +139,8 @@ STATICFILES_DIRS = STATIC_DIR,
 MEDIA_ROOT = MEDIA_DIR,
 MEDIA_URL = '/media/'
 
+
+LOGIN_URL = '/account/login'
 
 # Login
 # https://docs.djangoproject.com/en/4.1/topics/auth/passwords/
