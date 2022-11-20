@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'App_login',
     'App_blog',
     'crispy_forms',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -121,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -136,8 +137,8 @@ STATICFILES_DIRS = STATIC_DIR,
 
 #media
 
-MEDIA_ROOT = MEDIA_DIR,
 MEDIA_URL = '/media/'
+MEDIA_ROOT = MEDIA_DIR
 
 
 LOGIN_URL = '/account/login'

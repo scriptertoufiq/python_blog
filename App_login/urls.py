@@ -11,5 +11,7 @@ urlpatterns =[
     path('profile/',views.user_profile,name='profile'),
     path('change/profile/',views.user_profile_change,name='change_profile'),
     path('change/password/',views.pass_change,name='pass_change'),
+    path('add/profile/picture/',views.add_pro_pic,name='add_pro_pic'),
+    path('update/profile/picture/',views.change_pro_pic,name='change_pro_pic'),
 ]
 

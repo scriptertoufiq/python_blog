@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Change Profile Image {% endblock %}
+
+{% block body_block %}
+{% if changed %}
+<div class="alert alert-success">
+    Image changed Successfully.
+</div>
+{% endif %}
+<h2>Change Profile Picture</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="mt-2 btn btn-success">Change Image</button>
+</form>
+{% endblock %}
